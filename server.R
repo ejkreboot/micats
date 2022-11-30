@@ -112,7 +112,7 @@ server <- function(input, output, session) {
 
   output$map <- renderGoogle_map({
     data <- cap()
-    data$Info <- paste("<b>", dat$Facility, "</b><br>", dat$Notes)
+    data$Info <- paste("<b>", data$Facility, "</b><br>", data$Notes)
     google_map(search_box = TRUE,
                zoom_control = FALSE,
                map_type_control = FALSE,
