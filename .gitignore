@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+config.R
+data/MICATS.sqlite
+.DS_Store
+*.Rproj
+rsconnect
+rsconnect/*

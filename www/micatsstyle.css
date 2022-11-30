@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto&display=swap');
+
+#capacity_edit {
+  font-weight: 900;
+}
+
+#instructions {
+  color: #0ED7E5;
+  font-weight: 600;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+body {
+  font-family: Montserrat;
+  width: 1200px
+}
+
+h2 {
+  font-weight: 800;
+  margin-top: 5px;
+  padding-left: 20px;
+}
+
+#capacity {
+  margin-left: 20px;
+  font-size: 12px
+}
+img {
+  padding-right: 10px
+}
+
+.fleft {
+  float: left;
+}
+
+#title {
+  padding: 10px;
+}
