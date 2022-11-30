@@ -1,7 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto&display=swap');
 
+/* get rid of "close" x on mouse over info box on google map */
+button.gm-ui-hover-effect {
+    visibility: hidden;
+}
+
 #capacity_edit {
   font-weight: 900;
+}
+
+/* adding mouse over on google map has strange effect on floated table */
+#DataTables_Table_0 {
+  margin: 0px;
+  width: 700px !important;
 }
 
 #instructions {

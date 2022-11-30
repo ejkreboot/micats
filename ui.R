@@ -9,6 +9,7 @@
 
 library(shiny)
 library(shinymanager)
+library(shinyjs)
 library(DT)
 library(DTedit)
 library(shinythemes)
@@ -34,17 +35,18 @@ if (!file.exists("data/MICATS.sqlite")) {
 
 # Wrap your UI with secure_app, enabled admin mode or not
 ui <- secure_app(
-  theme = shinythemes::shinytheme("simplex"),
+  theme = shinythemes::shinytheme("cosmo"),
   tag_img = tags$img(
     src = "./logo.svg", width = 100
   ),
   fluidPage(
+    useShinyjs(),
     busy_start_up(
-      loader = spin_epic("orbit", color = "#FFF"),
+      loader = spin_epic("self-building-square", color = "#CCC"),
       text = "Loading...",
       timeout = 1000,
       color = "#66f48c",
-      background = "#012855"
+      background = "white"
     ),
     tags$head(
       tags$link(
@@ -54,7 +56,6 @@ ui <- secure_app(
       )
     ),
 
-    add_busy_spinner(spin = "fading-circle"),
     # Application title
     div(id = "title",
         div(class = "fleft", tags$image(src="logo.svg")),
@@ -70,7 +71,7 @@ ui <- secure_app(
         shiny::fluidRow(
           shiny::column(width = 4,
                         div(id = "map-container",
-                            google_mapOutput(height = 600, width = 400, outputId = "map")
+                            google_mapOutput(height = 650, width = 400, outputId = "map")
                         )),
           shiny::column(width = 8,
                         uiOutput('capacity'))
